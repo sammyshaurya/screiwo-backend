@@ -28,10 +28,10 @@ const connectdb = async () => {
     }
 };
 
-
+const port = process.env.PORT || 3000
 // Start the server after database connection
 connectdb().then(() => {
-    App.listen(3000, () => {
-        console.log("Server started on port 3000");
+    App.listen(port, () => {
+        console.log(`Server started on port ${port}`);
     });
 });
