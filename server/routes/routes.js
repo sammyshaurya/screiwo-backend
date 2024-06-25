@@ -27,6 +27,9 @@ Router.use(cors());
 // }
 // fixmodel()
 
+Router.get("/api/hello", async (req,res) => {
+  return res.status(200).send("hello world")
+})
 // currently being used to by nav to search for users in the database
 Router.get("/api/allusers", async (req, res) => {
   const query = req.query.q;
